@@ -149,7 +149,34 @@ const controllerMapping = {
       }
   },
 
-
+  // This is the mapping for a MY-POWER CO.,LTD USB Joystick. The mapping has been developped using a 
+  // Speedlink Strike NX gamepad in special mode, but the joystick library recognizes it as a MY-POWER CO.,LTD USB Joystick.
+  'MY-POWER CO.,LTD USB Joystick': {
+  
+    'buttons': {
+      '2':  'KEYCODE_BUTTON_A',
+      '1':  'KEYCODE_BUTTON_B',
+      '3':  'KEYCODE_BUTTON_X',
+      '0':  'KEYCODE_BUTTON_Y',
+      '4':  'KEYCODE_BUTTON_L1',
+      '5':  'KEYCODE_BUTTON_R1',
+      '6':  'KEYCODE_BUTTON_LTRIGGER', 
+      '7':  'KEYCODE_BUTTON_RTRIGGER',
+      '8':  'KEYCODE_BACK',
+      '9':  'KEYCODE_BUTTON_START',
+      '10': 'KEYCODE_BUTTON_THUMBL',
+      '11': 'KEYCODE_BUTTON_THUMBR',
+      },
+    
+    'axes': {
+      '0': 'AXIS_X',
+      '1': 'AXIS_Y',
+      '2': 'AXIS_RZ',
+      '3': 'AXIS_Z',
+      '4': 'AXIS_HAT_X',
+      '5': 'AXIS_HAT_Y'
+      }
+  },
   // This is a generic mapping, but it also represents a PS5 DualSense
   // controller. The controller reports "Wireless Controller", so it's what
   // we'll use when no others are detected.

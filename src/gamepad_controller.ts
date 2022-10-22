@@ -118,6 +118,38 @@ const controllerMapping = {
       }
   },
 
+  // This is the mapping for a Microsoft X-Box 360 gamepad. The mapping has been developped using a 
+  // Speedlink Strike NX gamepad, but the joystick library recognizes it as a Microsoft X-Box 360 pad.
+
+  'Microsoft X-Box 360 pad': {
+  
+    'buttons': {
+      '0':  'KEYCODE_BUTTON_A',
+      '1':  'KEYCODE_BUTTON_B',
+      '2':  'KEYCODE_BUTTON_X',
+      '3':  'KEYCODE_BUTTON_Y',
+      '4':  'KEYCODE_BUTTON_L1',
+      '5':  'KEYCODE_BUTTON_R1',
+      '6':  'KEYCODE_BACK',
+      '7':  'KEYCODE_BUTTON_START',
+      '8':  'KEYCODE_HOME',
+      '9':  'KEYCODE_BUTTON_THUMBL',
+      '10': 'KEYCODE_BUTTON_THUMBR',
+      },
+    
+    'axes': {
+      '0': 'AXIS_X',
+      '1': 'AXIS_Y',
+      '2': 'AXIS_LTRIGGER', // note: also activates the button.
+      '3': 'AXIS_RZ',
+      '4': 'AXIS_Z',
+      '5': 'AXIS_RTRIGGER', // note: also activates the button.
+      '6': 'AXIS_HAT_X',
+      '7': 'AXIS_HAT_Y'
+      }
+  },
+
+
   // This is a generic mapping, but it also represents a PS5 DualSense
   // controller. The controller reports "Wireless Controller", so it's what
   // we'll use when no others are detected.

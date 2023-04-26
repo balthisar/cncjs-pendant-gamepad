@@ -100,8 +100,8 @@ function configureCLI(cli: Command, version: string) {
     .option('-b, --baudrate <baudrate>',                  'baud rate of serial port or cnc machine',                '115200')
 
     .addOption(new Option('-t, --controller-type <type>', 'controller type')
-      .choices(['grbl', 'marlin'])
-      .default('grbl'))
+      .choices(['Grbl', 'marlin'])
+      .default('Grbl'))
 
     .option('-s, --secret <secret>',                      'the secret key stored in the ~/.cncrc file')
     .option('--socket-address <address>',                 'cncjs address or hostname',                              'localhost')

@@ -147,6 +147,7 @@ export class Connector {
     this.subscribeMessage('serialport:open', () => {
       clearInterval(this.serial);
       this.serialConnected = true;
+      this.serial = null;
       log.info(this.logPrefix, `Connection to ${this.options.port} successful.`);
     });
 
@@ -244,13 +245,15 @@ export class Connector {
       log.info(this.logPrefix, msg);
       log.info(this.logPrefix, `Connection to ${this.options.port} successful.`);
     } else {
-      this.serial = setInterval( () => {
-        log.info(this.logPrefix, msg);
-        this.socket.emit('open', this.options.port, {
-          baudrate: Number(this.options.baudrate),
-          controllerType: this.options.controllerType
-      });
-  }, 2000);
+      if (!this.serial && !this.serialConnected) {
+        this.serial = setInterval(() => {
+          log.info(this.logPrefix, msg);
+          this.socket.emit('open', this.options.port, {
+            baudrate: Number(this.options.baudrate),
+            controllerType: this.options.controllerType
+          });
+        }, 5000);
+      }
     }
   };
 

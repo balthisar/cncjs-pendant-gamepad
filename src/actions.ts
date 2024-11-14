@@ -117,8 +117,8 @@ export class Actions {
   // when button combinations are needed. 
   //--------------------------------------------------------------------------
   onUse(id: string, state: GamepadState) {
-    const a = state.axisStates;        // dereference for easy access.
-    const b = state.buttonStates;      // dereference for easy access.
+    const a = state.axisStates || {};  // Use empty object as fallback if undefined
+    const b = state.buttonStates || {}; // Use empty object as fallback if undefined
     let ai = new XYZCoords;            // mm to move each axis.
 
     //------------------------------------------------------------
@@ -460,7 +460,7 @@ export class Actions {
 
     if ((Object.keys(state).length === 0) || (Object.keys(ai).length === 0))
       return;
-    if (ai.move_x_axis === 0 && ai.move_y_axis === 0 && ai.move_z_axis == 0)
+    if (ai.move_x_axis === 0 && ai.move_y_axis === 0 && ai.move_z_axis === 0)
       return;
 
     this.jogGantry(ai.move_x_axis, ai.move_y_axis, ai.move_z_axis);

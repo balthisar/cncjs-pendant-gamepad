@@ -158,6 +158,36 @@ const controllerMapping = {
       '7': 'AXIS_HAT_Y'
       }
   },
+  '8Bitdo SN30 Pro': {
+    'buttons': {
+      '0': 'KEYCODE_BUTTON_A',        // A button
+      '1': 'KEYCODE_BUTTON_B',        // B button
+      '2': 'undefined',               // B button
+      '3': 'KEYCODE_BUTTON_X',        /// Left bumper
+      '4': 'KEYCODE_BUTTON_Y',        // Y button
+      '6': 'KEYCODE_BUTTON_L1',       // Left bumper
+      '7': 'KEYCODE_BUTTON_R1',       // Right bumper
+      '8': 'KEYCODE_BUTTON_LTRIGGER', // Left trigger
+      '9': 'KEYCODE_BUTTON_RTRGGER',  // Right trigger
+      '10': 'KEYCODE_SELECT',         // Select button
+      '11': 'KEYCODE_BUTTON_START',   // Start button
+      '12': 'KEYCODE_HOME',           // Home button
+      '13': 'KEYCODE_BUTTON_THUMBL',  // Left joystick button
+      '14': 'KEYCODE_BUTTON_THUMBR'   // Right joystick button
+
+    },
+
+    'axes': {
+      '0': 'AXIS_X',                 // Left joystick X-axis
+      '1': 'AXIS_Y',                 // Left joystick Y-axis
+      '2': 'AXIS_Z',                 // Right joystick X-axis
+      '3': 'AXIS_RZ',                // Right joystick Y-axis
+      '4': 'AXIS_RTRIGGER',
+      '5': 'AXIS_LTRIGGER',
+      '6': 'AXIS_HAT_X',             // D-pad horizontal
+      '7': 'AXIS_HAT_Y'              // D-pad vertical
+    }
+  }
 }
 
 
